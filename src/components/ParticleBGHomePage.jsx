@@ -60,15 +60,16 @@ const ParticleBGHomePage = () => {
                         links: {
                             color: "#1ecbe1",
                             distance: 50,
-                            enable: true,
+                            enable: false,
                             opacity: 0.5,
                             width: 1,
                         },
                         move: {
-                            direction: "none",
+                            direction: "bottom",
                             enable: true,
                             outModes: {
-                                default: "bounce",
+                                default: "out",
+                                bottom: "out",
                             },
                             random: false,
                             speed: 1,
@@ -79,10 +80,19 @@ const ParticleBGHomePage = () => {
                                 enable: false,
                                 area: 800,
                             },
-                            value: 7,
+                            value: 10,
                         },
                         opacity: {
                             value: 0.15,
+                        },
+                        rotate: {
+                        value: 0,
+                        random: false,
+                        direction: "clockwise",
+                        animation: {
+                            enable: false,
+                            speed: 100,
+                            },
                         },
                         shape: {
                             type: "polygon",
@@ -91,7 +101,7 @@ const ParticleBGHomePage = () => {
                         },
                         },
                         size: {
-                            value: { min: 80, max: 200 },
+                            value: { min: 80, max: 150 },
                         },
                     },
                     detectRetina: true,
